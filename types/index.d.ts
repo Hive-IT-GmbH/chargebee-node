@@ -65,51 +65,53 @@
 ///<reference path='./resources/VirtualBankAccount.d.ts' />
 
 declare module 'chargebee' {
-  export default class chargebee {
+  export default class {
     static configure({ site, api_key }: { site: string; api_key: string });
-    address: Address.AddressResource;
-    attached_item: AttachedItem.AttachedItemResource;
-    card: Card.CardResource;
-    comment: Comment.CommentResource;
-    coupon: Coupon.CouponResource;
-    coupon_code: CouponCode.CouponCodeResource;
-    coupon_set: CouponSet.CouponSetResource;
-    credit_note: CreditNote.CreditNoteResource;
-    customer: Customer.CustomerResource;
-    differential_price: DifferentialPrice.DifferentialPriceResource;
-    entitlement: Entitlement.EntitlementResource;
-    entitlement_override: EntitlementOverride.EntitlementOverrideResource;
-    estimate: Estimate.EstimateResource;
-    event: Event.EventResource;
-    export: Export.ExportResource;
-    feature: Feature.FeatureResource;
-    gift: Gift.GiftResource;
-    hosted_page: HostedPage.HostedPageResource;
-    in_app_subscription: InAppSubscription.InAppSubscriptionResource;
-    installment: Installment.InstallmentResource;
-    installment_config: InstallmentConfig.InstallmentConfigResource;
-    invoice: Invoice.InvoiceResource;
-    item: Item.ItemResource;
-    item_entitlement: ItemEntitlement.ItemEntitlementResource;
-    item_family: ItemFamily.ItemFamilyResource;
-    item_price: ItemPrice.ItemPriceResource;
-    non_subscription: NonSubscription.NonSubscriptionResource;
-    order: Order.OrderResource;
-    payment_intent: PaymentIntent.PaymentIntentResource;
-    payment_source: PaymentSource.PaymentSourceResource;
-    payment_voucher: PaymentVoucher.PaymentVoucherResource;
-    portal_session: PortalSession.PortalSessionResource;
-    promotional_credit: PromotionalCredit.PromotionalCreditResource;
-    purchase: Purchase.PurchaseResource;
-    quote: Quote.QuoteResource;
-    resource_migration: ResourceMigration.ResourceMigrationResource;
-    site_migration_detail: SiteMigrationDetail.SiteMigrationDetailResource;
-    subscription: Subscription.SubscriptionResource;
-    subscription_entitlement: SubscriptionEntitlement.SubscriptionEntitlementResource;
-    time_machine: TimeMachine.TimeMachineResource;
-    transaction: Transaction.TransactionResource;
-    unbilled_charge: UnbilledCharge.UnbilledChargeResource;
-    usage: Usage.UsageResource;
-    virtual_bank_account: VirtualBankAccount.VirtualBankAccountResource;
+    static address: Address.AddressResource;
+    static attached_item: AttachedItem.AttachedItemResource;
+    static card: Card.CardResource;
+    static comment: Comment.CommentResource;
+    static coupon: Coupon.CouponResource;
+    static coupon_code: CouponCode.CouponCodeResource;
+    static coupon_set: CouponSet.CouponSetResource;
+    static credit_note: CreditNote.CreditNoteResource;
+    static customer: Customer.CustomerResource;
+    static differential_price: DifferentialPrice.DifferentialPriceResource;
+    static entitlement: Entitlement.EntitlementResource;
+    static entitlement_override: EntitlementOverride.EntitlementOverrideResource;
+    static estimate: Estimate.EstimateResource;
+    static event: Event.EventResource;
+    static export: Export.ExportResource;
+    static feature: Feature.FeatureResource;
+    static gift: Gift.GiftResource;
+    static hosted_page: HostedPage.HostedPageResource;
+    static in_app_subscription: InAppSubscription.InAppSubscriptionResource;
+    static installment: Installment.InstallmentResource;
+    static installment_config: InstallmentConfig.InstallmentConfigResource;
+    static invoice: Invoice.InvoiceResource;
+    static item: Item.ItemResource;
+    static item_entitlement: ItemEntitlement.ItemEntitlementResource;
+    static item_family: ItemFamily.ItemFamilyResource;
+    static item_price: ItemPrice.ItemPriceResource;
+    static non_subscription: NonSubscription.NonSubscriptionResource;
+    static order: Order.OrderResource;
+    static payment_intent: PaymentIntent.PaymentIntentResource;
+    static payment_source: PaymentSource.PaymentSourceResource;
+    static payment_voucher: PaymentVoucher.PaymentVoucherResource;
+    static portal_session: PortalSession.PortalSessionResource;
+    static promotional_credit: PromotionalCredit.PromotionalCreditResource;
+    static purchase: Purchase.PurchaseResource;
+    static quote: Quote.QuoteResource;
+    static resource_migration: ResourceMigration.ResourceMigrationResource;
+    static site_migration_detail: SiteMigrationDetail.SiteMigrationDetailResource;
+    static subscription: Subscription.SubscriptionResource;
+    static subscription_entitlement: SubscriptionEntitlement.SubscriptionEntitlementResource;
+    static time_machine: TimeMachine.TimeMachineResource;
+    static token: Token.TokenResource;
+    static transaction: Transaction.TransactionResource;
+    static unbilled_charge: UnbilledCharge.UnbilledChargeResource;
+    static usage: Usage.UsageResource;
+    static virtual_bank_account: VirtualBankAccount.VirtualBankAccountResource;
+    
   }
 }
