@@ -1,3 +1,7 @@
+# Hive-IT GmbH - Chargebee Node.js Client Library EDGE runtime compatible
+
+This fork is fully Edge Runtime compatible. It is based on the original [Chargebee Node.js Client Library](https://github.com/chargebee/chargebee-node).
+
 # Chargebee Node.js Client Library
 
 [![npm](https://img.shields.io/npm/v/chargebee.svg?maxAge=3)](https://www.npmjs.com/package/chargebee)
@@ -10,7 +14,7 @@ This is the [node.js](http://nodejs.org/) library for integrating with Chargebee
 
 ## Requirements
 
-Node 0.6 or higher.
+Node 18 or higher.
 
 ## Installation
 
