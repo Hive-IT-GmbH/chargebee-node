@@ -1,3 +1,141 @@
+### v2.37.0 (2024-07-03)
+* * *
+
+#### New resources:
+* Currency has been added.
+* PricingPageSession Transfer has been added.
+
+#### New Enum 
+* cancel_option Enum has been added. 
+
+#### New Enum values:
+* ONLINE_BANKING_POLAND has been added in PaymentMethod enum.
+* ONLINE_BANKING_POLAND has been added in PaymentMethodType enum.
+* ONLINE_BANKING_POLAND has been added in Type enum.
+* DRAFT has been added in Ramp enum.
+
+#### New Input parameters:
+* cancel_option has been added to Estimate#CancelSubscriptionRequest, Estimate#CancelSubscriptionForItemsRequest.
+* cancel_option has been added to Subscription#CancelForItemsRequest, Subscription#CancelRequest.
+* statement_descriptor[descriptor] has been added to Purchase#ChargeRequest.
+
+#### New Attributes:
+* tax_origin has been added to Invoice.
+* tax_origin has been added to CreditNote.
+
+### v2.36.0 (2024-05-28)
+* * *
+
+#### New resources:
+* BusinessEntity has been added.
+* BusinessEntity Transfer has been added.
+
+
+#### New Enum values:
+* NUVEI has been added in Gateway enum.
+
+
+#### New Attributes:
+* site_details_at_creation has been added to CreditNote. 
+* site_details_at_creation has been added to Invoice. 
+
+
+#### New Input parameters:
+* tax_providers_fields[provider_name] has been added to Addon#CreateRequest, Addon#UpdateRequest.
+* tax_providers_fields[field_id] has been added to Addon#CreateRequest, Addon#UpdateRequest.
+* tax_providers_fields[field_value] has been added to Addon#CreateRequest, #UpdateRequest.
+
+* tax_providers_fields[provider_name] has been added to Customer#CreateRequest, Customer#UpdateRequest, Customer#MoveRequest.
+* tax_providers_fields[field_id] has been added to Customer#CreateRequest, Customer#UpdateRequest, Customer#MoveRequest.
+* tax_providers_fields[field_value] has been added to Customer#CreateRequest, Customer#UpdateRequest, Customer#MoveRequest..
+
+* tax_providers_fields[provider_name] has been added to Estimate#CreateSubscriptionRequest, Estimate#CreateSubItemEstimateRequest, Estimate#CreateInvoiceRequest, CreateInvoiceForItemsRequest.
+* tax_providers_fields[field_id] has been added to Estimate#CreateSubscriptionRequest, Estimate#CreateSubItemEstimateRequest, Estimate#CreateInvoiceRequest, CreateInvoiceForItemsRequest.
+* tax_providers_fields[field_value] has been added to Estimate#CreateSubscriptionRequest, Estimate#CreateSubItemEstimateRequest, Estimate#CreateInvoiceRequest, CreateInvoiceForItemsRequest.
+
+* tax_providers_fields[provider_name] has been added to Invoice#CreateRequest, Invoice#CreateForChargeItemsAndChargesRequest, Invoice#ChargeRequest.
+* tax_providers_fields[field_id] has been added to Invoice#CreateRequest, Invoice#CreateForChargeItemsAndChargesRequest, Invoice#ChargeRequest.
+* tax_providers_fields[field_value] has been added to Invoice#CreateRequest, Invoice#CreateForChargeItemsAndChargesRequest, Invoice#ChargeRequest.
+
+* tax_providers_fields[provider_name] has been added to ItemPrice#CreateRequest, ItemPrice#UpdateRequest.
+* tax_providers_fields[field_id] has been added to ItemPrice#CreateRequest, ItemPrice#UpdateRequest.
+* tax_providers_fields[field_value] has been added to ItemPrice#CreateRequest, ItemPrice#UpdateRequest.
+
+* tax_providers_fields[provider_name] has been added to Plan#CreateRequest, Plan#UpdateRequest.
+* tax_providers_fields[field_id] has been added to Plan#CreateRequest, Plan#UpdateRequest.
+* tax_providers_fields[field_value] has been added to Plan#CreateRequest, Plan#UpdateRequest.
+
+* tax_providers_fields[provider_name] has been added to Quote#EditOneTimeQuoteRequest, Quote#CreateForOnetimeChargesRequest, Quote#CreateForChargeItemsAndChargesRequest, Quote#EditForChargeItemsAndChargesRequest.
+* tax_providers_fields[field_id] has been added to Quote#EditOneTimeQuoteRequest, Quote#CreateForOnetimeChargesRequest, Quote#CreateForChargeItemsAndChargesRequest, Quote#EditForChargeItemsAndChargesRequest.
+* tax_providers_fields[field_value] has been added to Quote#EditOneTimeQuoteRequest, Quote#CreateForOnetimeChargesRequest, Quote#CreateForChargeItemsAndChargesRequest, Quote#EditForChargeItemsAndChargesRequest.
+
+* tax_providers_fields[provider_name] has been added to UnbilledCharge#CreateUnbilledChargeRequest, UnbilledCharge#CreateRequest.
+* tax_providers_fields[field_id] has been added to UnbilledCharge#CreateUnbilledChargeRequest, UnbilledCharge#CreateRequest.
+* tax_providers_fields[field_value] has been added to UnbilledCharge#CreateUnbilledChargeRequest, UnbilledCharge#CreateRequest.
+
+* line_items[entity_type] has been added to CreditNote#CreateRequest.
+* line_items[entity_id] has been added to CreditNote#CreateRequest.
+
+### v2.35.1 (2024-05-02)
+* * *
+
+#### Removed resources:
+* Session has been removed.
+
+### v2.35.0 (2024-04-30)
+* * *
+
+#### New resources:
+* PriceVariant has been added.
+* Ramp has been added.
+* InstallmentDetail has been added.
+* Session has been added.
+* Ramp has been added.
+
+#### New Enum values:
+* INVOICE_INSTALLMENTS_CREATED has been added in EventType enum.
+* INVOICE_INSTALLMENT_UPDATED has been added in EventType enum.
+* INSTALLMENT_CONFIG_CREATED has been added in EventType enum.
+* INSTALLMENT_CONFIG_DELETED has been added in EventType enum.
+* RAMP_CREATED has been added in EventType enum.
+* RAMP_DELETED has been added in EventType enum.
+* RAMP_APPLIED has been added in EventType enum.
+
+#### New Attributes:
+* tax_providers_fields has been added to Addon resource.
+* tax_providers_fields has been added to Customer resource.
+* tax_providers_fields has been added to ItemPrice resource.
+* tax_providers_fields has been added to Plan resource.
+* resource_version has been added to Installment resource.
+* resource_version has been added to InstallmentConfig resource.
+* KlarnaPayNow has been added to PaymentSource resource.
+* business_entity_id has been added to UnbilledCharge resource.
+
+#### New Endpoints:
+* Exports#PriceVariantsRequest has been added to Exports resource.
+
+#### New Input parameters:
+* changes_scheduled_at, change_option has been added to Estimate#UpdateSubscriptionRequest.
+* changes_scheduled_at, change_option has been added to Estimate#UpdateSubscriptionForItemsRequest.
+* contract_term[contract_start] has been added to Estimate#CreateSubItemEstimateRequest.
+* contract_term[contract_start] has been added to Estimate#CreateSubItemForCustomerEstimateRequest.
+* contract_term[contract_start] has been added to Subscription#CreateWithItemsRequest.
+* contract_term[contract_start] has been added to Subscription#UpdateForItemsRequest.
+* price_variant_id has been added to ItemPrice#CreateRequest.
+* price_variant_id has been added to ItemPrice#UpdateRequest.
+* price_variant_id has been added to ItemPrice#ListRequest.
+
+#### Removed attributes:
+* additional_info has been removed from Invoice#StatmentDescriptor resource.
+
+#### Removed Input parameters:
+* additional_info has been removed from Subscription#CreateRequest.
+* additional_info has been removed from Subscription#CreateForCustomerRequest.
+* additional_info has been removed from Subscription#CreateWithItemsRequest.
+* additional_info has been removed from Subscription#UpdateRequest.
+* additional_info has been removed from Subscription#UpdateForItemsRequest.
+* additional_info has been removed from Subscription#ReactivateRequest.
+
 ### v2.34.1 (2024-04-03)
 * * *
 

@@ -325,6 +325,10 @@ Ireland** . The first two characters of the VAT number in such a case is &#x60;X
       */
     
     billing_address?:CreditNote.BillingAddress;
+    
+    site_details_at_creation?:CreditNote.SiteDetailsAtCreation;
+
+    tax_origin?:CreditNote.TaxOrigin;
   }
   export namespace CreditNote {
     export class CreditNoteResource {  
@@ -1777,6 +1781,16 @@ If you have enabled [EU VAT](https://www.chargebee.com/docs/eu-vat.html) in 2021
           */
        
       validation_status?:ValidationStatus;
+    }
+    export interface SiteDetailsAtCreation {  
+      timezone?:string;
+       
+      organization_address?:object;
+    }
+    export interface TaxOrigin {  
+      country?:string;
+       
+      registration_number?:string;
     }
   }
 }

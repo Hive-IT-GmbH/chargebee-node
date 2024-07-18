@@ -2,6 +2,8 @@
 ///<reference path='./resources/AdvanceInvoiceSchedule.d.ts' />
 ///<reference path='./resources/AttachedItem.d.ts' />
 ///<reference path='./resources/Attribute.d.ts' />
+///<reference path='./resources/BusinessEntity.d.ts' />
+///<reference path='./resources/BusinessEntityTransfer.d.ts' />
 ///<reference path='./resources/Card.d.ts' />
 ///<reference path='./resources/Comment.d.ts' />
 ///<reference path='./resources/Contact.d.ts' />
@@ -11,6 +13,7 @@
 ///<reference path='./resources/CouponSet.d.ts' />
 ///<reference path='./resources/CreditNote.d.ts' />
 ///<reference path='./resources/CreditNoteEstimate.d.ts' />
+///<reference path='./resources/Currency.d.ts' />
 ///<reference path='./resources/Customer.d.ts' />
 ///<reference path='./resources/DifferentialPrice.d.ts' />
 ///<reference path='./resources/Discount.d.ts' />
@@ -31,6 +34,7 @@
 ///<reference path='./resources/InAppSubscription.d.ts' />
 ///<reference path='./resources/Installment.d.ts' />
 ///<reference path='./resources/InstallmentConfig.d.ts' />
+///<reference path='./resources/InstallmentDetail.d.ts' />
 ///<reference path='./resources/Invoice.d.ts' />
 ///<reference path='./resources/InvoiceEstimate.d.ts' />
 ///<reference path='./resources/Item.d.ts' />
@@ -44,12 +48,15 @@
 ///<reference path='./resources/PaymentSource.d.ts' />
 ///<reference path='./resources/PaymentVoucher.d.ts' />
 ///<reference path='./resources/PortalSession.d.ts' />
+///<reference path='./resources/PriceVariant.d.ts' />
+///<reference path='./resources/PricingPageSession.d.ts' />
 ///<reference path='./resources/PromotionalCredit.d.ts' />
 ///<reference path='./resources/Purchase.d.ts' />
 ///<reference path='./resources/Quote.d.ts' />
 ///<reference path='./resources/QuoteLineGroup.d.ts' />
 ///<reference path='./resources/QuotedCharge.d.ts' />
 ///<reference path='./resources/QuotedSubscription.d.ts' />
+///<reference path='./resources/Ramp.d.ts' />
 ///<reference path='./resources/ResourceMigration.d.ts' />
 ///<reference path='./resources/SiteMigrationDetail.d.ts' />
 ///<reference path='./resources/Subscription.d.ts' />
@@ -69,12 +76,15 @@ declare module 'chargebee' {
     static configure({ site, api_key }: { site: string; api_key: string });
     static address: Address.AddressResource;
     static attached_item: AttachedItem.AttachedItemResource;
+    static business_entity: BusinessEntity.BusinessEntityResource;
+    static business_entity_transfer: BusinessEntityTransfer.BusinessEntityTransferResource;
     static card: Card.CardResource;
     static comment: Comment.CommentResource;
     static coupon: Coupon.CouponResource;
     static coupon_code: CouponCode.CouponCodeResource;
     static coupon_set: CouponSet.CouponSetResource;
     static credit_note: CreditNote.CreditNoteResource;
+    static currency: Currency.CurrencyResource;
     static customer: Customer.CustomerResource;
     static differential_price: DifferentialPrice.DifferentialPriceResource;
     static entitlement: Entitlement.EntitlementResource;
@@ -99,13 +109,17 @@ declare module 'chargebee' {
     static payment_source: PaymentSource.PaymentSourceResource;
     static payment_voucher: PaymentVoucher.PaymentVoucherResource;
     static portal_session: PortalSession.PortalSessionResource;
+    static price_variant: PriceVariant.PriceVariantResource;
+    static pricing_page_session: PricingPageSession.PricingPageSessionResource;
     static promotional_credit: PromotionalCredit.PromotionalCreditResource;
     static purchase: Purchase.PurchaseResource;
     static quote: Quote.QuoteResource;
+    static ramp: Ramp.RampResource;
     static resource_migration: ResourceMigration.ResourceMigrationResource;
     static site_migration_detail: SiteMigrationDetail.SiteMigrationDetailResource;
     static subscription: Subscription.SubscriptionResource;
     static subscription_entitlement: SubscriptionEntitlement.SubscriptionEntitlementResource;
+    static tax_withheld: TaxWithheld.TaxWithheldResource;
     static time_machine: TimeMachine.TimeMachineResource;
     static token: Token.TokenResource;
     static transaction: Transaction.TransactionResource;
