@@ -49,7 +49,6 @@
 ///<reference path='./resources/PaymentVoucher.d.ts' />
 ///<reference path='./resources/PortalSession.d.ts' />
 ///<reference path='./resources/PriceVariant.d.ts' />
-///<reference path='./resources/PricingPageSession.d.ts' />
 ///<reference path='./resources/PromotionalCredit.d.ts' />
 ///<reference path='./resources/Purchase.d.ts' />
 ///<reference path='./resources/Quote.d.ts' />
@@ -110,7 +109,6 @@ declare module 'chargebee' {
     static payment_voucher: PaymentVoucher.PaymentVoucherResource;
     static portal_session: PortalSession.PortalSessionResource;
     static price_variant: PriceVariant.PriceVariantResource;
-    static pricing_page_session: PricingPageSession.PricingPageSessionResource;
     static promotional_credit: PromotionalCredit.PromotionalCreditResource;
     static purchase: Purchase.PurchaseResource;
     static quote: Quote.QuoteResource;
