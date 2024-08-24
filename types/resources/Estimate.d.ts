@@ -1,4 +1,5 @@
 ///<reference path='./../core.d.ts'/>
+///<reference path='./../index.d.ts'/>
 declare module 'chargebee' {
   export interface Estimate {
     
@@ -315,6 +316,8 @@ declare module 'chargebee' {
       use_existing_balances?:boolean;
        
       invoice_immediately?:boolean;
+       
+      invoice_usages?:boolean;
     }
     export interface RenewalEstimateResponse {  
        estimate:Estimate;

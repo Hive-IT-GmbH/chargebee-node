@@ -1,4 +1,6 @@
 ///<reference path='./../core.d.ts'/>
+///<reference path='./../index.d.ts'/>
+
 declare module 'chargebee' {
   export interface Subscription {
     [key : string] : any;
@@ -433,14 +435,7 @@ Applicable only when [Metered Billing](https://www.chargebee.com/docs/metered_bi
       */
     
     referral_info?:Subscription.ReferralInfo;
-    
-    /**
-      * @description Contract terms for this subscription
-
-      */
-    
-    contract_term?:Subscription.ContractTerm;
-    
+     
     /**
       * @description List of discounts for this subscription
 
@@ -2757,6 +2752,7 @@ Updates the specified subscription by setting the parameters passed. Any paramet
         */
        
       item_tiers?:{ending_unit?:number,ending_unit_in_decimal?:string,item_price_id?:string,price?:number,price_in_decimal?:string,starting_unit?:number,starting_unit_in_decimal?:string}[];
+      invoice_usages?:boolean;
     }
     export interface ChangeTermEndResponse {  
        subscription:Subscription;
@@ -3846,6 +3842,10 @@ If [addon billing cycles](https://www.chargebee.com/docs/2.0/addons-billingcycle
           */
        
       proration_type?:'partial_term' | 'full_term' | 'none';
+
+      billing_period?:number;
+       
+      billing_period_unit?:'day' | 'week' | 'month' | 'year';
     }
     export interface ItemTier {  
          /**
