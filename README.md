@@ -1,3 +1,8 @@
+
+# PLEASE USE Chargebee v3 - It has now everything this fork offered!
+
+---
+
 # Hive-IT GmbH - Chargebee Node.js Client Library EDGE runtime compatible
 
 This fork is fully Edge Runtime compatible. It is based on the original [Chargebee Node.js Client Library](https://github.com/chargebee/chargebee-node).
